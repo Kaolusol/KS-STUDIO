@@ -43,7 +43,7 @@
         }
 
         .logo-img {
-            height: 75px; /* ปรับขนาดโลโก้ให้ใหญ่ขึ้นเด่นชัด */
+            height: 75px; 
             width: auto;
             object-fit: contain;
             border-radius: 8px; 
@@ -96,7 +96,7 @@
             color: white;
             text-align: center;
             padding: 0 20px;
-            margin-top: 95px; /* ปรับระยะเว้นด้านบนหลบ Header ที่ขยายใหญ่ขึ้น */
+            margin-top: 95px; 
         }
 
         .hero h1 {
@@ -105,8 +105,15 @@
             font-weight: 700;
         }
 
-        .hero h1 span { color: #ffcc00; }
-        .hero p { font-size: 20px; color: #cbd5e1; margin-bottom: 20px; }
+        .hero h1 span { 
+            color: #ffcc00; 
+        }
+        
+        .hero p { 
+            font-size: 20px; 
+            color: #cbd5e1; 
+            margin-bottom: 20px; 
+        }
 
         .location-badge {
             background-color: #ffcc00;
@@ -118,7 +125,9 @@
         }
 
         /* Section Base Style */
-        section { padding: 80px 20px; }
+        section { 
+            padding: 80px 20px; 
+        }
 
         .section-title {
             font-size: 34px;
@@ -130,7 +139,9 @@
             font-weight: 700;
         }
 
-        .section-title span { color: #ffcc00; }
+        .section-title span { 
+            color: #ffcc00; 
+        }
 
         .section-title::after {
             content: '';
@@ -153,8 +164,17 @@
         }
 
         /* Story Section */
-        .story-section { max-width: 900px; margin: 0 auto; }
-        .story-text { font-size: 17px; color: #cbd5e1; text-align: center; }
+        .story-section { 
+            max-width: 900px; 
+            margin: 0 auto; 
+        }
+        
+        .story-text { 
+            font-size: 17px; 
+            color: #cbd5e1; 
+            text-align: center; 
+        }
+        
         .logo-story-box { 
             margin-top: 40px; 
             padding: 25px; 
@@ -183,9 +203,20 @@
             transition: border-color 0.3s;
         }
 
-        .portfolio-card:hover { border-color: #ffcc00; }
-        .portfolio-info h3 { color: #ffffff; font-size: 20px; margin-bottom: 6px; }
-        .portfolio-info p { color: #94a3b8; font-size: 14.5px; }
+        .portfolio-card:hover { 
+            border-color: #ffcc00; 
+        }
+        
+        .portfolio-info h3 { 
+            color: #ffffff; 
+            font-size: 20px; 
+            margin-bottom: 6px; 
+        }
+        
+        .portfolio-info p { 
+            color: #94a3b8; 
+            font-size: 14.5px; 
+        }
 
         .portfolio-tag {
             background: rgba(255, 204, 0, 0.1);
@@ -303,11 +334,83 @@
             border: 1px solid #27272a;
         }
 
-        .srv-card h3 { margin-bottom: 10px; color: #ffcc00; font-size: 20px; }
-        .srv-card p { color: #94a3b8; font-size: 14px; }
+        .srv-card h3 { 
+            margin-bottom: 10px; 
+            color: #ffcc00; 
+            font-size: 20px; 
+        }
+        
+        .srv-card p { 
+            color: #94a3b8; 
+            font-size: 14px; 
+        }
+
+        /* Terms of Service Section Styles */
+        .terms-section {
+            background-color: #111115;
+        }
+
+        .terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .terms-card {
+            background: #16161a;
+            border: 1px solid #27272a;
+            border-radius: 16px;
+            padding: 30px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .terms-card:hover {
+            border-color: #ffcc00;
+            transform: translateY(-3px);
+        }
+
+        .terms-card h3 {
+            font-size: 20px;
+            color: #ffcc00;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .terms-card ul {
+            list-style: none;
+        }
+
+        .terms-card ul li {
+            color: #cbd5e1;
+            font-size: 14.5px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 22px;
+        }
+
+        .terms-card ul li::before {
+            content: "•";
+            color: #ffcc00;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 18px;
+            top: -2px;
+        }
+
+        .terms-card ul li strong {
+            color: #ffffff;
+        }
 
         /* Background Sections */
-        .experience-section, .pricing-section { background-color: #111115; }
+        .experience-section, .pricing-section { 
+            background-color: #111115; 
+        }
 
         /* Schedule Section */
         .calendar-wrapper {
@@ -320,25 +423,110 @@
             border: 2px solid #ffcc00; 
         }
 
-        .calendar-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .calendar-wrapper iframe { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+        }
 
         /* Contact Section */
-        .contact { text-align: center; background: #111115; }
-        .admin-badge { display: inline-block; background: rgba(255, 204, 0, 0.1); border: 1px dashed #ffcc00; color: #ffcc00; padding: 8px 20px; border-radius: 8px; margin-bottom: 20px; }
-        .btn-contact { display: inline-block; background-color: #ffcc00; color: #111; padding: 14px 35px; text-decoration: none; border-radius: 25px; font-weight: 700; }
+        .contact { 
+            text-align: center; 
+            background: #111115; 
+        }
+        
+        .admin-badge { 
+            display: inline-block; 
+            background: rgba(255, 204, 0, 0.1); 
+            border: 1px dashed #ffcc00; 
+            color: #ffcc00; 
+            padding: 8px 20px; 
+            border-radius: 8px; 
+            margin-bottom: 20px; 
+        }
+        
+        .btn-contact { 
+            display: inline-block; 
+            background-color: #ffcc00; 
+            color: #111; 
+            padding: 14px 35px; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            font-weight: 700; 
+        }
 
         /* Footer */
-        footer { background-color: #060608; color: #475569; text-align: center; padding: 25px; font-size: 13px; }
+        footer { 
+            background-color: #060608; 
+            color: #475569; 
+            text-align: center; 
+            padding: 25px; 
+            font-size: 13px; 
+        }
 
+        /* Mobile Responsive Adjustments (รองรับมือถือและจอแนวตั้ง) */
         @media (max-width: 768px) {
-            header { padding: 10px 20px; }
-            nav a { margin-left: 12px; font-size: 13.5px; }
-            .hero h1 { font-size: 32px; }
-            .hero { margin-top: 95px; }
-            .section-title { font-size: 26px; }
-            .portfolio-card { flex-direction: column; align-items: flex-start; gap: 15px; }
-            .portfolio-tag { align-self: flex-start; }
-            .calendar-wrapper { height: 500px; }
+            header { 
+                padding: 10px 15px; 
+                flex-direction: column;
+                gap: 10px;
+            }
+            .logo-img {
+                height: 55px;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px 12px;
+            }
+            nav a { 
+                margin-left: 0; 
+                font-size: 13px; 
+            }
+            .lang-switch {
+                margin-left: 0;
+                padding: 3px 8px;
+                font-size: 12px;
+            }
+            .hero { 
+                margin-top: 130px; 
+                height: auto;
+                padding: 60px 20px;
+            }
+            .hero h1 { 
+                font-size: 28px; 
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .section-title { 
+                font-size: 26px; 
+            }
+            .portfolio-card { 
+                flex-direction: column; 
+                align-items: flex-start; 
+                gap: 15px; 
+            }
+            .portfolio-tag { 
+                align-self: flex-start; 
+            }
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .terms-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 10px;
+            }
+            .terms-card {
+                padding: 20px;
+            }
+            .calendar-wrapper { 
+                height: 450px; 
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;700&display=swap" rel="stylesheet">
@@ -354,6 +542,7 @@
             <a href="#experience" id="nav-exp">ผลงาน</a>
             <a href="#services" id="nav-services">บริการ</a>
             <a href="#pricing" id="nav-pricing">ราคา</a>
+            <a href="#terms" id="nav-terms">ข้อตกลงร้าน</a>
             <a href="#queue" id="nav-queue">คิวงาน</a>
             <a href="#contact" id="nav-contact">ติดต่อ</a>
             <button class="lang-switch" onclick="toggleLanguage()" id="lang-btn">EN</button>
@@ -531,6 +720,44 @@
         </div>
     </section>
 
+    <section id="terms" class="terms-section">
+        <h2 class="section-title" id="terms-title">TERMS OF <span>SERVICE</span></h2>
+        <p class="section-subtitle" id="terms-subtitle">กฎและข้อตกลงในการสั่งงานเพื่อความเข้าใจที่ตรงกัน</p>
+        
+        <div class="terms-grid" id="terms-grid-container">
+            <div class="terms-card">
+                <h3>🛠️ Revision Policy</h3>
+                <ul>
+                    <li>สามารถแก้ไขงานได้<strong>ไม่เกิน 3 ครั้ง</strong> ต่อ 1 โปรเจกต์</li>
+                    <li><strong>Draft 1 (รอบแรก):</strong> เมื่อได้รับดราฟแรก รบกวนพิมพ์สรุปจุดแก้ไขทั้งหมดส่งมาในรอบเดียว</li>
+                    <li><strong>Draft 2 (รอบสอง):</strong> ตรวจสอบจุดแก้ไขต่อเนื่อง และพิมพ์สรุปจุดแก้ไขทั้งหมดส่งมาในรอบเดียว</li>
+                    <li><strong>Draft 3 (รอบสาม):</strong> รอบแก้ไขสุดท้าย รบกวนเช็กความเรียบร้อยทั้งหมดและพิมพ์ส่งมาในรอบเดียว</li>
+                    <li><strong>Draft 4 (Final Product):</strong> งานในรอบนี้จะถือว่าเป็นงานสมบูรณ์และพร้อมส่งมอบทันที</li>
+                    <li>หากต้องการแก้ไขเพิ่มเติมหลังจากนี้ คิดค่าบริการเพิ่ม <strong>รอบละ 200 บาท</strong></li>
+                </ul>
+            </div>
+
+            <div class="terms-card">
+                <h3>⏰ Delay Policy</h3>
+                <ul>
+                    <li>ทางร้านจะระบุวันและเวลาส่งมอบงานที่ชัดเจนให้ทราบล่วงหน้าก่อนเริ่มงานทุกครั้ง</li>
+                    <li><strong>กรณีล่าช้า (เฉพาะงานวิดีโอ):</strong> หากส่งงานเลทกว่าเวลาที่ตกลงกันไว้ ลูกค้าสามารถ<strong>หักเงินค่าจ้างได้ วันละ 50 บาท</strong> นับจากวันที่เกินกำหนด</li>
+                    <li>เงื่อนไขการหักเงินล่าช้านี้ ไม่มีผลบังคับใช้กับงานประเภทอื่น ๆ ของทางร้าน</li>
+                </ul>
+            </div>
+
+            <div class="terms-card">
+                <h3>📦 File Storage Policy</h3>
+                <ul>
+                    <li>หลังจากส่งมอบงาน Final ทางร้านจะอัปโหลดไฟล์ไว้บน Google Drive ให้ดาวน์โหลดเป็นเวลา <strong>30 วันเท่านั้น</strong></li>
+                    <li>หลังจากพ้นกำหนด 30 วัน ระบบจะทำการลบไฟล์ออกจาก Google Drive ทันทีเพื่อจัดสรรพื้นที่</li>
+                    <li><strong>การดูแลระยะยาว (Lifetime Backup):</strong> ไฟล์ทั้งหมดจะถูกย้ายไปสำรองข้อมูลไว้ใน External SSD ส่วนตัว ปลอดภัยแน่นอน</li>
+                    <li>ทางร้านจะจัดเก็บไฟล์ไว้อย่างยาวนานเป็นร้อยปี แม้ในอนาคตจะเลิกกิจการไปแล้ว ก็สามารถทักช่องทางส่วนตัวมาขอไฟล์ได้ตลอดเวลา</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section id="queue" class="schedule-section">
         <h2 class="section-title" id="queue-title">WORK <span>SCHEDULE</span></h2>
         <p class="section-subtitle" id="queue-subtitle">ตารางคิวงานแบบ Real-time ผ่าน Google Calendar</p>
@@ -545,7 +772,7 @@
             <p style="color: #cbd5e1; margin-bottom: 20px;" id="contact-subtitle">สนใจวันไหน หรืออยากปรึกษาไอเดียถ่ายงานแบบไหนก่อน ทักแชทหาทีมงานได้ทันที</p>
             <div class="admin-badge" id="admin-time">🕒 เวลาทำการแอดมิน: 09:00 - 21:00 น.</div>
             <br>
-            <a href="https://instagram.com/_.ks.studio._" target="_blank" class="btn-contact" id="contact-btn">ส่งข้อความ DM ติดต่อทีม KS STUDIO</a>
+            <a href="https://instagram.com/__.ks.studio.__" target="_blank" class="btn-contact" id="contact-btn">ส่งข้อความ DM ติดต่อทีม KS STUDIO</a>
         </div>
     </section>
 
@@ -554,14 +781,25 @@
     </footer>
 
     <script>
+        // ==========================================
+        // LOCALIZATION DICTIONARY SYSTEM
+        // ==========================================
         const translations = {
             th: {
-                navStory: "สตอรี่ของเรา", navExp: "ผลงาน", navServices: "บริการ", navPricing: "ราคา", navQueue: "คิวงาน", navContact: "ติดต่อ",
+                navStory: "สตอรี่ของเรา", 
+                navExp: "ผลงาน", 
+                navServices: "บริการ", 
+                navPricing: "ราคา", 
+                navTerms: "ข้อตกลงร้าน",
+                navQueue: "คิวงาน", 
+                navContact: "ติดต่อ",
                 heroSubtitle: "บันทึกทุกความทรงจำในสไตล์ที่เป็นคุณ",
-                storyTitle: "THE STORY OF KS STUDIO", storySubtitle: "ทำความรู้จักกับเราสั้นๆ",
+                storyTitle: "THE STORY OF KS STUDIO", 
+                storySubtitle: "ทำความรู้จักกับเราสั้นๆ",
                 storyBody: `<p>สวัสดี ยินดีต้อนรับสู่พื้นที่ของ <strong>"กุศล"</strong> ช่างภาพผู้ก่อตั้ง <strong>KS STUDIO ตั้งแต่อายุ 16 ปี</strong> เพื่อส่งมอบมุมมองใหม่ๆ ด้วยไฟแห่งความหลงใหล เต็มเปี่ยมด้วยความรับผิดชอบและการดูแลแบบมืออาชีพในทุกโปรดักชัน โดยเรามี<strong>ทีมงานซัพพอร์ตมากกว่า 50 คน++</strong> ที่พร้อมสแตนด์บายจัดสรรให้เหมาะสมตามขนาดและรูปแบบของแต่ละงาน</p>`,
                 logoStory: `<h3 style="color: #ffcc00; margin-bottom: 8px; font-size: 18px;">🔥 THE INSIDERS: ประวัติโลโก้และไฟแห่งแรงบันดาลใจ</h3><p style="font-size: 14.5px; color: #cccccc; text-align: justify; text-justify: inter-word;">สัญลักษณ์ประกายไฟในโลโก้คือตัวแทนของ <strong>"ไฟแห่งความทะเยอทะยานและไอเดียที่ไม่มีวันมอดดับ"</strong> เริ่มต้นจากกล้องตัวแรกและความตั้งใจที่อยากจะฉีกกรอบเดิมๆ ทุกครั้งที่กดชัตเตอร์หรือเริ่มสตรีมระบบ ไฟดวงนี้จะถูกส่งต่อไปยังทุกชิ้นงานเพื่อปลุกพลัง เสกให้ช่วงเวลาธรรมดาของลูกค้ากลายเป็นความทรงจำที่มหัศจรรย์ มีชีวิตชีวา และทรงคุณค่าที่สุด</p>`,
-                expTitle: "OUR <span>PORTFOLIO</span>", expSubtitle: "ประสบการณ์การทำงานร่วมกับหน่วยงานและองค์กรชั้นนำ",
+                expTitle: "OUR <span>PORTFOLIO</span>", 
+                expSubtitle: "ประสบการณ์การทำงานร่วมกับหน่วยงานและองค์กรชั้นนำ",
                 expListHTML: `
                     <div class="portfolio-card">
                         <div class="portfolio-info">
@@ -591,8 +829,10 @@
                         </div>
                         <div class="portfolio-tag">Sports Broadcast</div>
                     </div>`,
-                servicesTitle: "OUR <span>SERVICES</span>", servicesSubtitle: "บริการที่เราพร้อมดูแลคุณ",
-                pricingTitle: "SERVICE <span>PRICING</span>", pricingSubtitle: "เรทราคาค่าบริการเริ่มต้น",
+                servicesTitle: "OUR <span>SERVICES</span>", 
+                servicesSubtitle: "บริการที่เราพร้อมดูแลคุณ",
+                pricingTitle: "SERVICE <span>PRICING</span>", 
+                pricingSubtitle: "เรทราคาค่าบริการเริ่มต้น",
                 pricingGridHTML: `
                     <div class="price-card">
                         <div class="price-card-header">
@@ -675,18 +915,59 @@
                             </div>
                         </div>
                     </div>`,
-                queueTitle: "WORK <span>SCHEDULE</span>", queueSubtitle: "ตารางคิวงานแบบ Real-time ผ่าน Google Calendar",
-                contactTitle: "สนใจร่วมงานกัน ทักมาคุยได้เลย!", contactSubtitle: "สนใจวันไหน หรืออยากปรึกษาไอเดียถ่ายงานแบบไหนก่อน ทักแชทหาทีมงานได้ทันที",
+                termsTitle: "TERMS OF <span>SERVICE</span>",
+                termsSubtitle: "กฎและข้อตกลงในการสั่งงานเพื่อความเข้าใจที่ตรงกัน",
+                termsGridHTML: `
+                    <div class="terms-card">
+                        <h3>🛠️ Revision Policy</h3>
+                        <ul>
+                            <li>สามารถแก้ไขงานได้<strong>ไม่เกิน 3 ครั้ง</strong> ต่อ 1 โปรเจกต์</li>
+                            <li><strong>Draft 1 (รอบแรก):</strong> เมื่อได้รับดราฟแรก รบกวนพิมพ์สรุปจุดแก้ไขทั้งหมดส่งมาในรอบเดียว</li>
+                            <li><strong>Draft 2 (รอบสอง):</strong> ตรวจสอบจุดแก้ไขต่อเนื่อง และพิมพ์สรุปจุดแก้ไขทั้งหมดส่งมาในรอบเดียว</li>
+                            <li><strong>Draft 3 (รอบสาม):</strong> รอบแก้ไขสุดท้าย รบกวนเช็กความเรียบร้อยทั้งหมดและพิมพ์ส่งมาในรอบเดียว</li>
+                            <li><strong>Draft 4 (Final Product):</strong> งานในรอบนี้จะถือว่าเป็นงานสมบูรณ์และพร้อมส่งมอบทันที</li>
+                            <li>หากต้องการแก้ไขเพิ่มเติมหลังจากนี้ คิดค่าบริการเพิ่ม <strong>รอบละ 200 บาท</strong></li>
+                        </ul>
+                    </div>
+                    <div class="terms-card">
+                        <h3>⏰ Delay Policy</h3>
+                        <ul>
+                            <li>ทางร้านจะระบุวันและเวลาส่งมอบงานที่ชัดเจนให้ทราบล่วงหน้าก่อนเริ่มงานทุกครั้ง</li>
+                            <li><strong>กรณีล่าช้า (เฉพาะงานวิดีโอ):</strong> หากส่งงานเลทกว่าเวลาที่ตกลงกันไว้ ลูกค้าสามารถ<strong>หักเงินค่าจ้างได้ วันละ 50 บาท</strong> นับจากวันที่เกินกำหนด</li>
+                            <li>เงื่อนไขการหักเงินล่าช้านี้ ไม่มีผลบังคับใช้กับงานประเภทอื่น ๆ ของทางร้าน</li>
+                        </ul>
+                    </div>
+                    <div class="terms-card">
+                        <h3>📦 File Storage Policy</h3>
+                        <ul>
+                            <li>หลังจากส่งมอบงาน Final ทางร้านจะอัปโหลดไฟล์ไว้บน Google Drive ให้ดาวน์โหลดเป็นเวลา <strong>30 วันเท่านั้น</strong></li>
+                            <li>หลังจากพ้นกำหนด 30 วัน ระบบจะทำการลบไฟล์ออกจาก Google Drive ทันทีเพื่อจัดสรรพื้นที่</li>
+                            <li><strong>การดูแลระยะยาว (Lifetime Backup):</strong> ไฟล์ทั้งหมดจะถูกย้ายไปสำรองข้อมูลไว้ใน External SSD ส่วนตัว ปลอดภัยแน่นอน</li>
+                            <li>ทางร้านจะจัดเก็บไฟล์ไว้อย่างยาวนานเป็นร้อยปี แม้ในอนาคตจะเลิกกิจการไปแล้ว ก็สามารถทักช่องทางส่วนตัวมาขอไฟล์ได้ตลอดเวลา</li>
+                        </ul>
+                    </div>`,
+                queueTitle: "WORK <span>SCHEDULE</span>", 
+                queueSubtitle: "ตารางคิวงานแบบ Real-time ผ่าน Google Calendar",
+                contactTitle: "สนใจร่วมงานกัน ทักมาคุยได้เลย!", 
+                contactSubtitle: "สนใจวันไหน หรืออยากปรึกษาไอเดียถ่ายงานแบบไหนก่อน ทักแชทหาทีมงานได้ทันที",
                 adminTime: "🕒 เวลาทำการแอดมิน: 09:00 - 21:00 น.", 
                 contactBtn: "ส่งข้อความ DM ติดต่อทีม KS STUDIO"
             },
             en: {
-                navStory: "Story", navExp: "Portfolio", navServices: "Services", navPricing: "Pricing", navQueue: "Schedule", navContact: "Contact",
+                navStory: "Story", 
+                navExp: "Portfolio", 
+                navServices: "Services", 
+                navPricing: "Pricing", 
+                navTerms: "Terms",
+                navQueue: "Schedule", 
+                navContact: "Contact",
                 heroSubtitle: "Capturing your memories in your own unique style",
-                storyTitle: "THE STORY OF KS STUDIO", storySubtitle: "Get to know us",
+                storyTitle: "THE STORY OF KS STUDIO", 
+                storySubtitle: "Get to know us",
                 storyBody: `<p>Hello, I'm <strong>"Kusol"</strong>, a photographer who <strong>founded KS STUDIO at the age of 16</strong> to deliver fresh, passionate viewpoints with 100% professional responsibility on every project! Backed by a <strong>support network of 50+ professional crew members</strong>, we are fully capable of organizing and adjusting our team scale according to the unique requirements of each assignment.</p>`,
                 logoStory: `<h3 style="color: #ffcc00; margin-bottom: 8px; font-size: 18px;">🔥 THE INSIDERS: Logo & Sparks of Passion</h3><p style="font-size: 14.5px; color: #cccccc; text-align: justify; text-justify: inter-word;">The flame icon within our logo doesn't represent mere embers, but signifies <strong>"an unquenchable drive and continuous creative ignition."</strong> It all sparked from my first camera and a vow to shatter traditional molds on every single capture or live broadcast setup. This dynamic spark actively translates into all outputs to elevate ordinary frames into extraordinary, lasting, and soulful milestone assets for our clients.</p>`,
-                expTitle: "OUR <span>PORTFOLIO</span>", expSubtitle: "Proven track records with leading organizations and sectors",
+                expTitle: "OUR <span>PORTFOLIO</span>", 
+                expSubtitle: "Proven track records with leading organizations and sectors",
                 expListHTML: `
                     <div class="portfolio-card">
                         <div class="portfolio-info">
@@ -716,8 +997,10 @@
                         </div>
                         <div class="portfolio-tag">Sports Broadcast</div>
                     </div>`,
-                servicesTitle: "OUR <span>SERVICES</span>", servicesSubtitle: "Services we are ready to supply",
-                pricingTitle: "SERVICE <span>PRICING</span>", pricingSubtitle: "Starting flat service rates",
+                servicesTitle: "OUR <span>SERVICES</span>", 
+                servicesSubtitle: "Services we are ready to supply",
+                pricingTitle: "SERVICE <span>PRICING</span>", 
+                pricingSubtitle: "Starting flat service rates",
                 pricingGridHTML: `
                     <div class="price-card">
                         <div class="price-card-header">
@@ -800,47 +1083,100 @@
                             </div>
                         </div>
                     </div>`,
-                queueTitle: "WORK <span>SCHEDULE</span>", queueSubtitle: "Real-time calendar checking directly via Google Calendar",
-                contactTitle: "Ready to create something magic together?", contactSubtitle: "Let us know your preferred dates or target ideas anytime. Chat with us now!",
+                termsTitle: "TERMS OF <span>SERVICE</span>",
+                termsSubtitle: "Studio guidelines and policies for client project management",
+                termsGridHTML: `
+                    <div class="terms-card">
+                        <h3>🛠️ Revision Policy</h3>
+                        <ul>
+                            <li>Revisions are capped at a maximum of <strong>3 times</strong> per project scope.</li>
+                            <li><strong>Draft 1 (First Round):</strong> Please review the first draft and list all adjustments in one consolidated message.</li>
+                            <li><strong>Draft 2 (Second Round):</strong> Review the modified draft and list any final alignment edits in one complete message.</li>
+                            <li><strong>Draft 3 (Third Round):</strong> Final validation. Submit any remaining minor clean-up requests in one summary message.</li>
+                            <li><strong>Draft 4 (Final Product):</strong> Delivered files at this stage are finalized and considered completion assets.</li>
+                            <li>Any additional adjustment rounds required post-final will incur a flat fee of <strong>200 THB per round</strong>.</li>
+                        </ul>
+                    </div>
+                    <div class="terms-card">
+                        <h3>⏰ Delay Policy</h3>
+                        <ul>
+                            <li>The studio will specify a transparent and solid delivery deadline prior to project commencement.</li>
+                            <li><strong>Project Delay (Video Only):</strong> If video content is delivered past the agreed schedule, clients are entitled to a <strong>50 THB fee reduction per day</strong>.</li>
+                            <li>This delay deduction policy does not apply to other media production formats or services.</li>
+                        </ul>
+                    </div>
+                    <div class="terms-card">
+                        <h3>📦 File Storage Policy</h3>
+                        <ul>
+                            <li>Upon Final product delivery, files will remain accessible on our Google Drive cloud for <strong>30 days only</strong>.</li>
+                            <li>After 30 days, files are automatically purged from the active Google Drive folder to manage storage limits.</li>
+                            <li><strong>Lifetime Backup Guarantee:</strong> All project assets are migrated and permanently secured on physical External SSD storage arrays.</li>
+                            <li>Your files are preserved for a century. Even if operations cease in the future, you may reach out through personal channels to request access.</li>
+                        </ul>
+                    </div>`,
+                queueTitle: "WORK <span>SCHEDULE</span>", 
+                queueSubtitle: "Real-time calendar checking directly via Google Calendar",
+                contactTitle: "Ready to create something magic together?", 
+                contactSubtitle: "Let us know your preferred dates or target ideas anytime. Chat with us now!",
                 adminTime: "🕒 Admin Response Hours: 09:00 AM - 09:00 PM", 
                 contactBtn: "Send DM to Contact Team KS STUDIO"
             }
         };
 
+        // ==========================================
+        // INITIALIZATION AND STATE MANAGEMENT
+        // ==========================================
         let currentLang = 'th'; 
 
+        // ==========================================
+        // LANGUAGE TOGGLE FUNCTION INTERFACE
+        // ==========================================
         function toggleLanguage() {
             currentLang = currentLang === 'th' ? 'en' : 'th';
             document.getElementById('lang-btn').innerText = currentLang === 'th' ? 'EN' : 'TH';
             
+            // 1. Navigation Menu Updates
             document.getElementById('nav-story').innerText = translations[currentLang].navStory;
             document.getElementById('nav-exp').innerText = translations[currentLang].navExp;
             document.getElementById('nav-services').innerText = translations[currentLang].navServices;
             document.getElementById('nav-pricing').innerText = translations[currentLang].navPricing;
+            document.getElementById('nav-terms').innerText = translations[currentLang].navTerms;
             document.getElementById('nav-queue').innerText = translations[currentLang].navQueue;
             document.getElementById('nav-contact').innerText = translations[currentLang].navContact;
             
+            // 2. Hero Section Text Sync
             document.getElementById('hero-subtitle').innerText = translations[currentLang].heroSubtitle;
             
+            // 3. Biography Content Modules
             document.getElementById('story-title').innerText = translations[currentLang].storyTitle;
             document.getElementById('story-subtitle').innerText = translations[currentLang].storySubtitle;
             document.getElementById('story-body').innerHTML = translations[currentLang].storyBody;
             document.getElementById('logo-story-box').innerHTML = translations[currentLang].logoStory;
 
+            // 4. Portfolio List Generation
             document.getElementById('exp-title').innerHTML = translations[currentLang].expTitle;
             document.getElementById('exp-subtitle').innerText = translations[currentLang].expSubtitle;
             document.getElementById('exp-list-container').innerHTML = translations[currentLang].expListHTML;
             
+            // 5. Core Studio Services Text Mapping
             document.getElementById('services-title').innerHTML = translations[currentLang].servicesTitle;
             document.getElementById('services-subtitle').innerText = translations[currentLang].servicesSubtitle;
             
+            // 6. Pricing Models Component Sync
             document.getElementById('pricing-title').innerHTML = translations[currentLang].pricingTitle;
             document.getElementById('pricing-subtitle').innerText = translations[currentLang].pricingSubtitle;
             document.getElementById('pricing-grid-container').innerHTML = translations[currentLang].pricingGridHTML;
             
+            // 7. Store Terms and Policy Grid Modules
+            document.getElementById('terms-title').innerHTML = translations[currentLang].termsTitle;
+            document.getElementById('terms-subtitle').innerText = translations[currentLang].termsSubtitle;
+            document.getElementById('terms-grid-container').innerHTML = translations[currentLang].termsGridHTML;
+
+            // 8. Google Calendar Node Headings
             document.getElementById('queue-title').innerHTML = translations[currentLang].queueTitle;
             document.getElementById('queue-subtitle').innerText = translations[currentLang].queueSubtitle;
             
+            // 9. Call to Action (CTA) Form elements
             document.getElementById('contact-title').innerText = translations[currentLang].contactTitle;
             document.getElementById('contact-subtitle').innerText = translations[currentLang].contactSubtitle;
             document.getElementById('admin-time').innerText = translations[currentLang].adminTime;
