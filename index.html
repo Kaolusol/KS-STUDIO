@@ -229,13 +229,44 @@
             white-space: nowrap;
         }
 
-        /* Pricing Cards */
-        .pricing-grid {
+        /* Pricing & Services Grid Layout */
+        .services-grid, .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
+        }
+
+        .srv-card {
+            background: #16161a;
+            padding: 28px 25px;
+            border-radius: 14px;
+            border: 1px solid #27272a;
+            transition: border-color 0.3s, transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .srv-card:hover {
+            border-color: #ffcc00;
+            transform: translateY(-4px);
+        }
+
+        .srv-card h3 { 
+            margin-bottom: 12px; 
+            color: #ffcc00; 
+            font-size: 20px; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .srv-card p { 
+            color: #94a3b8; 
+            font-size: 14px; 
+            line-height: 1.6;
         }
 
         .price-card {
@@ -262,7 +293,7 @@
         }
 
         .price-card-header h3 {
-            font-size: 21px;
+            font-size: 20px;
             color: #ffffff;
             display: flex;
             align-items: center;
@@ -316,33 +347,6 @@
             font-style: italic;
             color: #64748b;
             font-size: 12.5px;
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .srv-card {
-            background: #16161a;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #27272a;
-        }
-
-        .srv-card h3 { 
-            margin-bottom: 10px; 
-            color: #ffcc00; 
-            font-size: 20px; 
-        }
-        
-        .srv-card p { 
-            color: #94a3b8; 
-            font-size: 14px; 
         }
 
         /* Terms of Service Section Styles */
@@ -466,7 +470,13 @@
             font-size: 13px; 
         }
 
-        /* Mobile Responsive Adjustments (รองรับมือถือและจอแนวตั้ง) */
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .services-grid, .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             header { 
                 padding: 10px 15px; 
@@ -504,6 +514,10 @@
             .section-title { 
                 font-size: 26px; 
             }
+            .services-grid, .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
             .portfolio-card { 
                 flex-direction: column; 
                 align-items: flex-start; 
@@ -511,10 +525,6 @@
             }
             .portfolio-tag { 
                 align-self: flex-start; 
-            }
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
             }
             .terms-grid {
                 grid-template-columns: 1fr;
@@ -606,22 +616,26 @@
     <section id="services" class="services">
         <h2 class="section-title" id="services-title">OUR <span>SERVICES</span></h2>
         <p class="section-subtitle" id="services-subtitle">บริการที่เราพร้อมดูแลคุณ</p>
-        <div class="services-grid">
+        <div class="services-grid" id="services-grid-container">
             <div class="srv-card">
-                <h3>Photo</h3>
-                <p id="srv-p1">ถ่ายภาพ Portrait, งานรับปริญญา, แฟชั่น, คาเฟ่ เน้นดึงมู้ดอารมณ์ให้สวยที่สุด</p>
+                <h3>📸 Photo</h3>
+                <p>ถ่ายภาพ Portrait, งานรับปริญญา, แฟชั่น, คาเฟ่ เน้นดึงมู้ดอารมณ์ให้สวยที่สุด</p>
             </div>
             <div class="srv-card">
-                <h3>Video</h3>
-                <p id="srv-p2">ถ่ายทำตัดต่อวิดีโอ Cinematic, Reels, TikTok สไตล์โมเดิร์นเข้ากับยุคใหม่</p>
+                <h3>🎥 Video</h3>
+                <p>ถ่ายทำตัดต่อวิดีโอ Cinematic, Reels, TikTok สไตล์โมเดิร์นเข้ากับยุคใหม่</p>
             </div>
             <div class="srv-card">
-                <h3>Drone</h3>
-                <p id="srv-p3">ถ่ายภาพและวิดีโุมุมสูง (Aerial View) เพิ่มความอลังการและแปลกใหม่ให้งาน</p>
+                <h3>🛸 Drone</h3>
+                <p>ถ่ายภาพและวิดีโุมุมสูง (Aerial View) เพิ่มความอลังการและแปลกใหม่ให้งาน</p>
             </div>
             <div class="srv-card">
-                <h3>Live Stream</h3>
-                <p id="srv-p4">บริการเซ็ตอัพระบบไลฟ์สดสตรีมมิ่งผ่าน vMix สำหรับงานอีเวนต์ สัมมนา ทุกรูปแบบ</p>
+                <h3>⚡ Live Stream</h3>
+                <p>บริการเซ็ตอัพระบบไลฟ์สดสตรีมมิ่งผ่าน vMix สำหรับงานอีเวนต์ สัมมนา ทุกรูปแบบ</p>
+            </div>
+            <div class="srv-card">
+                <h3>🎨 Canva Design</h3>
+                <p>ออกแบบกราฟิก สื่อโฆษณา Banner, Poster, Presentation สวยงามน่าดึงดูดด้วย Canva</p>
             </div>
         </div>
     </section>
@@ -631,7 +645,6 @@
         <p class="section-subtitle" id="pricing-subtitle">เรทราคาค่าบริการเริ่มต้น</p>
         
         <div class="pricing-grid" id="pricing-grid-container">
-            
             <div class="price-card">
                 <div class="price-card-header">
                     <h3>📸 Photography</h3>
@@ -717,6 +730,21 @@
                 </div>
             </div>
 
+            <div class="price-card">
+                <div class="price-card-header">
+                    <h3>🎨 Canva Design</h3>
+                    <p>บริการออกแบบสื่อกราฟิก</p>
+                </div>
+                <div class="price-content-box">
+                    <div class="price-item">
+                        <div class="price-item-title">
+                            <span class="price-name">Graphic / Banner</span>
+                            <span class="price-cost">300.-</span>
+                        </div>
+                        <p class="price-item-desc">ออกแบบปกเพจ, Banner สินค้า, โปสเตอร์โปรโมต, Presentation สไลด์นำเสนอผ่าน Canva</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -753,7 +781,6 @@
                     <li>หลังจากพ้นกำหนด 30 วัน ระบบจะทำการลบไฟล์ออกจาก Google Drive ทันทีเพื่อจัดสรรพื้นที่</li>
                     <li><strong>การดูแลระยะยาว (3-Years Extended Backup):</strong> ไฟล์ทั้งหมดจะถูกย้ายไปสำรองข้อมูลไว้ใน External SSD ส่วนตัว ปลอดภัยและหนาแน่นแน่นอนเป็นเวลา 3 ปีเต็ม</li>
                     <li>ทางร้านจะรับประกันจัดเก็บไฟล์ไว้อย่างปลอดภัยสูงสุดเป็นเวลา 3 ปีนับจากวันส่งงาน เพื่อให้มั่นใจว่าลูกค้าสามารถทักมาขอไฟล์สำรองได้ตลอดเวลาในช่วงสัญญา</li>
-
                 </ul>
             </div>
         </div>
@@ -797,8 +824,8 @@
                 heroSubtitle: "บันทึกทุกความทรงจำในสไตล์ที่เป็นคุณ",
                 storyTitle: "THE STORY OF KS STUDIO", 
                 storySubtitle: "ทำความรู้จักกับเราสั้นๆ",
-                storyBody: `<p>สวัสดี ยินดีต้อนรับสู่พื้นที่ของ <strong>"กุศล"</strong> ช่างภาพผู้ก่อตั้ง <strong>KS STUDIO ตั้งแต่อายุ 16 ปี</strong> เพื่อส่งมอบมุมมองใหม่ๆ ด้วยไฟแห่งความหลงใหล เต็มเปี่ยมด้วยความรับผิดชอบและการดูแลแบบมืออาชีพในทุกโปรดักชัน โดยเรามี<strong>ทีมงานซัพพอร์ตมากกว่า 50 คน++</strong> ที่พร้อมสแตนด์บายจัดสรรให้เหมาะสมตามขนาดและรูปแบบของแต่ละงาน</p>`,
-                logoStory: `<h3 style="color: #ffcc00; margin-bottom: 8px; font-size: 18px;">🔥 THE INSIDERS: ถอดรหัสเปลวไฟแห่งการสร้างสรรค์</h3><p style="font-size: 14.5px; color: #cccccc; text-align: justify; text-justify: inter-word;">สัญลักษณ์เปลวไฟที่พุ่งทะยานในโลโก้ของเรา ประกอบด้วยเลเยอร์ 3 เส้นสาย ซึ่งเป็นตัวแทนของคาแรคเตอร์หลักที่พวกเรายึดมั่น เส้นแรกคือ <strong>"Passion"</strong> (ไฟแห่งความหลงใหลตั้งแต่เริ่มทำตอนอายุ 16) เส้นที่สองคือ <strong>"Innovation"</strong> (มุมมองใหม่ๆ และระบบสตรีมมิ่ง-โดรนที่ล้ำสมัย) และเส้นสุดท้ายคือ <strong>"Responsibility"</strong> (ความรับผิดชอบร่วมกับทีมงานกว่า 50 ชีวิต) เมื่อสามสิ่งนี้หลอมรวมกัน จึงกลายเป็นพลังงานขับเคลื่อนให้เราพร้อม <strong>MAKE MAGIC</strong> ในทุกๆ โปรดักชันเพื่อลูกค้าของเรา</p>`,
+                storyBody: `<p>สวัสดี ยินดีต้อนรับสู่พื้นที่ของ <strong>"กุศล"</strong> ช่างภาพผู้ก่อตั้ง <strong>KS STUDIO ตั้งแต่อายุ 15 ปี</strong> เพื่อส่งมอบมุมมองใหม่ๆ ด้วยไฟแห่งความหลงใหล เต็มเปี่ยมด้วยความรับผิดชอบและการดูแลแบบมืออาชีพในทุกโปรดักชัน โดยเรามี<strong>ทีมงานซัพพอร์ตมากกว่า 50 คน++</strong> ที่พร้อมสแตนด์บายจัดสรรให้เหมาะสมตามขนาดและรูปแบบของแต่ละงาน</p>`,
+                logoStory: `<h3 style="color: #ffcc00; margin-bottom: 8px; font-size: 18px;">🔥 THE INSIDERS: ถอดรหัสเปลวไฟแห่งการสร้างสรรค์</h3><p style="font-size: 14.5px; color: #cccccc; text-align: justify; text-justify: inter-word;">สัญลักษณ์เปลวไฟที่พุ่งทะยานในโลโก้ของเรา ประกอบด้วยเลเยอร์ 3 เส้นสาย ซึ่งเป็นตัวแทนของคาแรคเตอร์หลักที่พวกเรายึดมั่น เส้นแรกคือ <strong>"Passion"</strong> (ไฟแห่งความหลงใหลตั้งแต่เริ่มทำตอนอายุ 15) เส้นที่สองคือ <strong>"Innovation"</strong> (มุมมองใหม่ๆ และระบบสตรีมมิ่ง-โดรนที่ล้ำสมัย) และเส้นสุดท้ายคือ <strong>"Responsibility"</strong> (ความรับผิดชอบร่วมกับทีมงานกว่า 50 ชีวิต) เมื่อสามสิ่งนี้หลอมรวมกัน จึงกลายเป็นพลังงานขับเคลื่อนให้เราพร้อม <strong>MAKE MAGIC</strong> ในทุกๆ โปรดักชันเพื่อลูกค้าของเรา</p>`,
                 expTitle: "OUR <span>PORTFOLIO</span>", 
                 expSubtitle: "ประสบการณ์การทำงานร่วมกับหน่วยงานและองค์กรชั้นนำ",
                 expListHTML: `
@@ -832,6 +859,27 @@
                     </div>`,
                 servicesTitle: "OUR <span>SERVICES</span>", 
                 servicesSubtitle: "บริการที่เราพร้อมดูแลคุณ",
+                servicesGridHTML: `
+                    <div class="srv-card">
+                        <h3>📸 Photo</h3>
+                        <p>ถ่ายภาพ Portrait, งานรับปริญญา, แฟชั่น, คาเฟ่ เน้นดึงมู้ดอารมณ์ให้สวยที่สุด</p>
+                    </div>
+                    <div class="srv-card">
+                        <h3>🎥 Video</h3>
+                        <p>ถ่ายทำตัดต่อวิดีโอ Cinematic, Reels, TikTok สไตล์โมเดิร์นเข้ากับยุคใหม่</p>
+                    </div>
+                    <div class="srv-card">
+                        <h3>🛸 Drone</h3>
+                        <p>ถ่ายภาพและวิดีโุมุมสูง (Aerial View) เพิ่มความอลังการและแปลกใหม่ให้งาน</p>
+                    </div>
+                    <div class="srv-card">
+                        <h3>⚡ Live Stream</h3>
+                        <p>บริการเซ็ตอัพระบบไลฟ์สดสตรีมมิ่งผ่าน vMix สำหรับงานอีเวนต์ สัมมนา ทุกรูปแบบ</p>
+                    </div>
+                    <div class="srv-card">
+                        <h3>🎨 Canva Design</h3>
+                        <p>ออกแบบกราฟิก สื่อโฆษณา Banner, Poster, Presentation สวยงามน่าดึงดูดด้วย Canva</p>
+                    </div>`,
                 pricingTitle: "SERVICE <span>PRICING</span>", 
                 pricingSubtitle: "เรทราคาค่าบริการเริ่มต้น",
                 pricingGridHTML: `
@@ -858,7 +906,7 @@
                             <div class="price-item">
                                 <div class="price-item-title">
                                     <span class="price-name">Group / ถ่ายกลุ่ม</span>
-                                    <span class="price-note">ตามตกลง</span>
+                                    <span class="price-note">แล้วแต่จำนวนคน</span>
                                 </div>
                                 <p class="price-item-desc">คิดเรทพิเศษตามจำนวนคนและเวลา</p>
                             </div>
@@ -915,6 +963,21 @@
                                 <p class="price-item-desc">เซ็ตอัพคุมระบบไลฟ์สดสตรีมมิ่งเต็มรูปแบบ ภาพคมชัด สลับกล้องสมูท สัญญาณเสถียรสำหรับอีเวนต์หรืองานสัมมนา</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card-header">
+                            <h3>🎨 Canva Design</h3>
+                            <p>บริการออกแบบสื่อกราฟิก</p>
+                        </div>
+                        <div class="price-content-box">
+                            <div class="price-item">
+                                <div class="price-item-title">
+                                    <span class="price-name">Graphic / Banner</span>
+                                    <span class="price-cost">300.-</span>
+                                </div>
+                                <p class="price-item-desc">ออกแบบปกเพจ, Banner สินค้า, โปสเตอร์โปรโมต, Presentation สไลด์นำเสนอผ่าน Canva</p>
+                            </div>
+                        </div>
                     </div>`,
                 termsTitle: "TERMS OF <span>SERVICE</span>",
                 termsSubtitle: "กฎและข้อตกลงในการสั่งงานเพื่อความเข้าใจที่ตรงกัน",
@@ -943,8 +1006,8 @@
                         <ul>
                             <li>หลังจากส่งมอบงาน Final ทางร้านจะอัปโหลดไฟล์ไว้บน Google Drive ให้ดาวน์โหลดเป็นเวลา <strong>30 วันเท่านั้น</strong></li>
                             <li>หลังจากพ้นกำหนด 30 วัน ระบบจะทำการลบไฟล์ออกจาก Google Drive ทันทีเพื่อจัดสรรพื้นที่</li>
-                            <li><strong>การดูแลระยะยาว (Lifetime Backup):</strong> ไฟล์ทั้งหมดจะถูกย้ายไปสำรองข้อมูลไว้ใน External SSD ส่วนตัว ปลอดภัยแน่นอน</li>
-                            <li>ทางร้านจะจัดเก็บไฟล์ไว้อย่างยาวนานเป็นร้อยปี แม้ในอนาคตจะเลิกกิจการไปแล้ว ก็สามารถทักช่องทางส่วนตัวมาขอไฟล์ได้ตลอดเวลา</li>
+                            <li><strong>การดูแลระยะยาว (3-Years Extended Backup):</strong> ไฟล์ทั้งหมดจะถูกย้ายไปสำรองข้อมูลไว้ใน External SSD ส่วนตัว ปลอดภัยและหนาแน่นแน่นอนเป็นเวลา 3 ปีเต็ม</li>
+                            <li>ทางร้านจะรับประกันจัดเก็บไฟล์ไว้อย่างปลอดภัยสูงสุดเป็นเวลา 3 ปีนับจากวันส่งงาน เพื่อให้มั่นใจว่าลูกค้าสามารถทักมาขอไฟล์สำรองได้ตลอดเวลาในช่วงสัญญา</li>
                         </ul>
                     </div>`,
                 queueTitle: "WORK <span>SCHEDULE</span>", 
@@ -965,8 +1028,8 @@
                 heroSubtitle: "Capturing your memories in your own unique style",
                 storyTitle: "THE STORY OF KS STUDIO", 
                 storySubtitle: "Get to know us",
-                storyBody: `<p>Hello, I'm <strong>"Kusol"</strong>, a photographer who <strong>founded KS STUDIO at the age of 16</strong> to deliver fresh, passionate viewpoints with 100% professional responsibility on every project! Backed by a <strong>support network of 50+ professional crew members</strong>, we are fully capable of organizing and adjusting our team scale according to the unique requirements of each assignment.</p>`,
-                logoStory: `<h3 style="color: #ffcc00; margin-bottom: 8px; font-size: 18px;">🔥 THE INSIDERS: Decoding the Flame of Creation</h3><p style="font-size: 14.5px; color: #cccccc; text-align: justify; text-justify: inter-word;">The soaring flame symbol in our logo consists of 3 distinct layers, representing the core characteristics we adhere to. The first line is <strong>"Passion"</strong> (the fire of passion since starting at age 16), the second line is <strong>"Innovation"</strong> (new perspectives and advanced streaming-drone systems), and the final line is <strong>"Responsibility"</strong> (shared responsibility with a team of over 50 lives). When these three elements fuse together, they become the driving energy that makes us ready to <strong>MAKE MAGIC</strong> in every production for our clients.</p>`,
+                storyBody: `<p>Hello, I'm <strong>"Kusol"</strong>, a photographer who <strong>founded KS STUDIO at the age of 15</strong> to deliver fresh, passionate viewpoints with 100% professional responsibility on every project! Backed by a <strong>support network of 50+ professional crew members</strong>, we are fully capable of organizing and adjusting our team scale according to the unique requirements of each assignment.</p>`,
+                logoStory: `<h3 style="color: #ffcc00; margin-bottom: 8px; font-size: 18px;">🔥 THE INSIDERS: Decoding the Flame of Creation</h3><p style="font-size: 14.5px; color: #cccccc; text-align: justify; text-justify: inter-word;">The soaring flame symbol in our logo consists of 3 distinct layers, representing the core characteristics we adhere to. The first line is <strong>"Passion"</strong> (the fire of passion since starting at age 15), the second line is <strong>"Innovation"</strong> (new perspectives and advanced streaming-drone systems), and the final line is <strong>"Responsibility"</strong> (shared responsibility with a team of over 50 lives). When these three elements fuse together, they become the driving energy that makes us ready to <strong>MAKE MAGIC</strong> in every production for our clients.</p>`,
                 expTitle: "OUR <span>PORTFOLIO</span>", 
                 expSubtitle: "Proven track records with leading organizations and sectors",
                 expListHTML: `
@@ -1000,6 +1063,27 @@
                     </div>`,
                 servicesTitle: "OUR <span>SERVICES</span>", 
                 servicesSubtitle: "Services we are ready to supply",
+                servicesGridHTML: `
+                    <div class="srv-card">
+                        <h3>📸 Photo</h3>
+                        <p>Portrait, Graduation, Fashion, and Cafe photography focused on capturing the best aesthetics and mood.</p>
+                    </div>
+                    <div class="srv-card">
+                        <h3>🎥 Video</h3>
+                        <p>Cinematic video production, Reels, and TikTok clips in modern styles tailored for current trends.</p>
+                    </div>
+                    <div class="srv-card">
+                        <h3>🛸 Drone</h3>
+                        <p>High-altitude aerial photography & videography adding stunning new perspectives to your project.</p>
+                    </div>
+                    <div class="srv-card">
+                        <h3>⚡ Live Stream</h3>
+                        <p>Complete vMix live streaming setups for events, seminars, and broadcasts of all sizes.</p>
+                    </div>
+                    <div class="srv-card">
+                        <h3>🎨 Canva Design</h3>
+                        <p>Graphic designs, promotional banners, posters, and presentation slide decks customized with Canva.</p>
+                    </div>`,
                 pricingTitle: "SERVICE <span>PRICING</span>", 
                 pricingSubtitle: "Starting flat service rates",
                 pricingGridHTML: `
@@ -1083,6 +1167,21 @@
                                 <p class="price-item-desc">Complete multi-camera broadcast set. Crisp feed and balanced stream stability for formal seminars or events.</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="price-card">
+                        <div class="price-card-header">
+                            <h3>🎨 Canva Design</h3>
+                            <p>Graphic Design Services</p>
+                        </div>
+                        <div class="price-content-box">
+                            <div class="price-item">
+                                <div class="price-item-title">
+                                    <span class="price-name">Graphic / Banner</span>
+                                    <span class="price-cost">300.-</span>
+                                </div>
+                                <p class="price-item-desc">Social media banners, promo posters, and presentation decks professionally created on Canva.</p>
+                            </div>
+                        </div>
                     </div>`,
                 termsTitle: "TERMS OF <span>SERVICE</span>",
                 termsSubtitle: "Studio guidelines and policies for client project management",
@@ -1111,8 +1210,8 @@
                         <ul>
                             <li>Upon Final product delivery, files will remain accessible on our Google Drive cloud for <strong>30 days only</strong>.</li>
                             <li>After 30 days, files are automatically purged from the active Google Drive folder to manage storage limits.</li>
-                            <li><strong>Lifetime Backup Guarantee:</strong> All project assets are migrated and permanently secured on physical External SSD storage arrays.</li>
-                            <li>Your files are preserved for a century. Even if operations cease in the future, you may reach out through personal channels to request access.</li>
+                            <li><strong>3-Years Extended Backup:</strong> All project assets are migrated and permanently secured on physical External SSD storage arrays for 3 full years.</li>
+                            <li>We guarantee maximum file safety for 3 years, ensuring you can reach out for backups anytime during the period.</li>
                         </ul>
                     </div>`,
                 queueTitle: "WORK <span>SCHEDULE</span>", 
@@ -1162,6 +1261,7 @@
             // 5. Core Studio Services Text Mapping
             document.getElementById('services-title').innerHTML = translations[currentLang].servicesTitle;
             document.getElementById('services-subtitle').innerText = translations[currentLang].servicesSubtitle;
+            document.getElementById('services-grid-container').innerHTML = translations[currentLang].servicesGridHTML;
             
             // 6. Pricing Models Component Sync
             document.getElementById('pricing-title').innerHTML = translations[currentLang].pricingTitle;
